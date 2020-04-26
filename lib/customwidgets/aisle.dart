@@ -5,9 +5,14 @@ import 'package:flutter_test_project/customwidgets/item.dart';
 class Aisle extends StatefulWidget {
   double width;
   double height;
-  Aisle(double width, double height) {
+  double xPos;
+  double yPos;
+
+  Aisle(double width, double height, double xPos, double yPos) {
     this.width = width;
     this.height = height;
+    this.xPos = xPos;
+    this.yPos = yPos;
   }
   List<Item> items = [];
   void addItem(Item item) {
@@ -15,17 +20,19 @@ class Aisle extends StatefulWidget {
   }
 
   @override
-  _AisleState createState() => _AisleState(width, height);
+  _AisleState createState() => _AisleState(width, height, xPos, yPos);
 }
 
 class _AisleState extends State<Aisle> {
-  double xPos = 50;
-  double yPos = 50;
+  double xPos;
+  double yPos;
   double width;
   double height;
-  _AisleState(double width, double height) {
+  _AisleState(double width, double height, double xPos, double yPos) {
     this.width = width;
     this.height = height;
+    this.xPos = xPos;
+    this.yPos = yPos;
   }
   @override
   void initState() {

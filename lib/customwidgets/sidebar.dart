@@ -16,14 +16,14 @@ class _SidebarState extends State<Sidebar> {
             children: <Widget>[
               Pfp(),
               ListTile(
-                  title: Text('Tile 1'),
+                  title: Text('Store Layouts'),
                   onTap: () {
                     router.navigateTo(context, '/page_one');
                   }
 
               ),
               ListTile(
-                  title: Text('Tile 2'),
+                  title: Text('Item Manager'),
                   onTap: () {
                     router.navigateTo(context, '/page_two');
                   }

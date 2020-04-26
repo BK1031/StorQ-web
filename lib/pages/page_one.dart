@@ -15,15 +15,164 @@ class _PageOneState extends State<PageOne> {
     return Scaffold(
       drawer: new Sidebar(),
       appBar: new AppBar(
-          title: Text('Homepage', style: TextStyle(color: Colors.white)),
+          title: Text('Store Layouts', style: TextStyle(color: Colors.white)),
+          backgroundColor: Colors.lightBlue,
           actions: <Widget>[
-            IconButton(icon: Icon(Icons.android))
-          ],
-          backgroundColor: Colors.lightBlue
+            FlatButton(onPressed: () {
+              router.navigateTo(context, '/page_one');
+            },
+              child: Text("Log Out", style: TextStyle(color: Colors.white)),
+              color: Colors.red
+          ),
+        ],
+
       ),
-      body: Container(
-          child: Row()
-      ),
+      body: GridView.count(
+        primary: false,
+        padding: const EdgeInsets.all(20),
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+        crossAxisCount: 4,
+        children: <Widget>[
+          InkWell(
+            onTap: () {
+              router.navigateTo(context, '/layout-one');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Center(
+                  child: const Text('Walmart Evergreen',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                      fontFamily: "Roboto",
+                      fontSize: 54)
+                  )
+              ),
+              color: Colors.lightBlue[600],
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              router.navigateTo(context, '/layout-two');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Center(
+                  child: const Text('Walmart DTSJ',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                          fontFamily: "Roboto",
+                          fontSize: 54)
+                  )
+              ),
+              color: Colors.lightBlue[600],
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              router.navigateTo(context, '/layout-3');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Center(
+                  child: const Text('Walmart Cupertino',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                          fontFamily: "Roboto",
+                          fontSize: 54)
+                  )
+              ),
+              color: Colors.lightBlue[600],
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              router.navigateTo(context, '/layout-3');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Center(
+                  child: const Text('Walmart Fremont',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                          fontFamily: "Roboto",
+                          fontSize: 54)
+                  )
+              ),
+              color: Colors.lightBlue[600],
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              router.navigateTo(context, '/layout-3');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Center(
+                  child: const Text('Walmart Palo Alto',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                          fontFamily: "Roboto",
+                          fontSize: 54)
+                  )
+              ),
+              color: Colors.lightBlue[600],
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              router.navigateTo(context, '/layout-3');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Center(
+                  child: const Text('Walmart San Francisco',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                          fontFamily: "Roboto",
+                          fontSize: 54)
+                  )
+              ),
+              color: Colors.lightBlue[600],
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              router.navigateTo(context, '/layout-3');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Center(
+                  child: const Text('Walmart Richmond',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                          fontFamily: "Roboto",
+                          fontSize: 54)
+                  )
+              ),
+              color: Colors.lightBlue[600],
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              router.navigateTo(context, '/layout-3');
+            },
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Center(
+                  child: const Text('Walmart Sunnyvale',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: Colors.white,
+                          fontFamily: "Roboto",
+                          fontSize: 54)
+                  )
+              ),
+              color: Colors.lightBlue[600],
+            ),
+          ),
+
+        ],
+      )
     );
   }
 }

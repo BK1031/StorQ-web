@@ -14,6 +14,8 @@ class PageTwo extends StatefulWidget {
 class _PageTwoState extends State<PageTwo> {
   double width = 15;
   double height = 100;
+  double xPos = 20;
+  double yPos = 50;
   List<Widget> aisles = [];
 
   @override
@@ -30,7 +32,7 @@ class _PageTwoState extends State<PageTwo> {
       floatingActionButton: new FloatingActionButton(onPressed: () {
         setState(() {
           int counter = 0;
-          aisles.add(Aisle(width, height));
+          aisles.add(Aisle(width, height, xPos, yPos));
         });
       }),
       body: Stack(

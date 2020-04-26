@@ -7,6 +7,7 @@ import 'package:flutter_test_project/pages/page_two.dart';
 import 'package:flutter_test_project/pages/login_page.dart';
 import 'package:firebase/firebase.dart';
 import 'package:flutter_test_project/firebase/service_account.dart';
+import 'package:flutter_test_project/pages/layoutone.dart';
 
 void main() {
     initializeApp(
@@ -25,6 +26,9 @@ void main() {
   router.define('/login', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
     return new LoginPage();
   }));
+    router.define('layout-one', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+      return new Layoutone();
+    }));
     runApp(new MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: '/page_one',
